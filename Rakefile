@@ -5,3 +5,5 @@
 require File.expand_path('../config/application', __FILE__)
 
 Phatograph2013::Application.load_tasks
+
+task :default => []
