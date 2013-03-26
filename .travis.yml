@@ -1,21 +1,20 @@
+---
 rvm:
-  - 1.9.3
-
+- 1.9.3
 after_script:
-  # Install the Heroku gem (or the Heroku toolbelt)
-  - gem install heroku
-  # Add your Heroku git repo:
-  - git remote add heroku git@heroku.com:phatograph2013.git
-  # Add your Heroku API key:
-  - export HEROKU_API_KEY=5ff325c0-7134-4ddc-b2fd-e746aba82f1a
-  # Turn off warnings about SSH keys:
-  - echo "Host heroku.com" >> ~/.ssh/config
-  - echo "   StrictHostKeyChecking no" >> ~/.ssh/config
-  - echo "   CheckHostIP no" >> ~/.ssh/config
-  - echo "   UserKnownHostsFile=/dev/null" >> ~/.ssh/config
-  # Clear your current Heroku SSH keys:
-  - heroku keys:clear
-  # Add a new SSH key to Heroku
-  - yes | heroku keys:add
-  # Push to Heroku!
-  - yes | git push heroku master
+- wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+- git remote add heroku git@heroku.com:phatograph2013.git
+- echo "Host heroku.com" >> ~/.ssh/config
+- echo "   StrictHostKeyChecking no" >> ~/.ssh/config
+- echo "   CheckHostIP no" >> ~/.ssh/config
+- echo "   UserKnownHostsFile=/dev/null" >> ~/.ssh/config
+- heroku keys:clear
+- yes | heroku keys:add
+- yes | git push heroku master
+env:
+  global:
+  - secure: ! 'FZ4Os+3zidYERHmdesrifZO47XGy7jOfH4v/wbYofbRhLQJUwplQHFVF6aHi
+
+      Y4BCHI4Mf6mkoQEO0kLQ6MadGFWXu69V278yGPJIZZqHWhiej0JYbeFyH8up
+
+      x50/0H4LHx7iCarVVfCRJzahTu60Iwi/Zx9NLnHMQrpv23Gs2WU='
