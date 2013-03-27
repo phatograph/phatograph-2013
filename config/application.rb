@@ -64,5 +64,19 @@ module Phatograph2013
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    config.generators do |generate|
+      generate.helper false
+      generate.assets false
+      # generate.test_framework :rspec
+      # generate.view_specs false
+      # generate.helper_specs false
+      # generate.model_specs false
+      # generate.controller_specs false
+      # generate.request_specs false
+      # generate.routing_specs false
+    end
+
+    config.assets.initialize_on_precompile = false
   end
 end
