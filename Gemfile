@@ -16,6 +16,9 @@ gem 'debugger'
 # gem 'omniauth-twitter'
 
 # gem 'twitter'
+gem 'bitbucket_rest_api'
+gem 'octokit'
+gem 'heroku-api'
 
 group :development do
   # gem 'mailcatcher'

@@ -1,0 +1,1 @@
+debug: bundle exec rails s -u
