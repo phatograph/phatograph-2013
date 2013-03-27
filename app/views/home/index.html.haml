@@ -1,2 +1,20 @@
-%h1 Home#index
-%p Find me in app/views/home/index.html.haml
+%h3 total github repositories: #{@github_repos.count}
+%ul
+  - @github_repos.each do |repo|
+    %li
+      = repo[:name]
+      %span.badge= repo[:size]
+
+%h3 total bitbucket repositories: #{@bitbucket_repos.count}
+%ul
+  - @bitbucket_repos.each do |repo|
+    %li
+      = repo[:name]
+      %span.badge= repo[:size]
+
+%h3 total heroku repositories: #{@heroku_apps.count}
+%ul
+  - @heroku_apps.each do |repo|
+    %li
+      = repo['name']
+      %span.badge= repo['repo_size']
