@@ -2,7 +2,7 @@
 rvm:
 - 1.9.3
 after_script:
-- if [[ "$TRAVIS_BRANCH" != "master" ]]; exit 0; fi
+- if [[ "$TRAVIS_BRANCH" != "master" ]]; then exit 0; fi
 - wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
 - git remote add heroku git@heroku.com:phatograph2013.git
 - echo "Host heroku.com" >> ~/.ssh/config
