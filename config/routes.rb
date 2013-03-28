@@ -1,8 +1,9 @@
 Phatograph2013::Application.routes.draw do
 
   get 'fetch' => 'home#fetch'
+  get 'ga'    => 'home#ga'
 
-  root :to => 'home#index'
+  root :to    => 'home#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

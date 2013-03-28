@@ -19,6 +19,7 @@ gem 'debugger'
 gem 'bitbucket_rest_api'
 gem 'octokit'
 gem 'heroku-api'
+gem 'garb'
 
 group :development do
   # gem 'mailcatcher'

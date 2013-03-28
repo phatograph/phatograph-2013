@@ -1,3 +1,10 @@
+class Exits
+  extend Garb::Model
+
+  metrics :visitors
+  dimensions :visit_count
+end
+
 class HomeController < ApplicationController
   def index
     @github_repos    = Project.where(:provider => 'github')
@@ -28,6 +35,23 @@ class HomeController < ApplicationController
         :name => repo['name'],
         :provider => 'heroku'
       }).first_or_create!(:size => repo['repo_size'] / 1.kilobyte)
+    end
+
+    render :text => '200'
+  end
+
+  def ga
+    Garb::Session.login(ENV['google_username'], ENV['google_password'])
+
+    profiles = Garb::Management::Profile.all
+    profiles.each do |p|
+      result = Exits.results(p, {
+        :start_date => Date.today - 1,
+        :end_date => Date.today
+      })
+
+      puts p.web_property_id
+      puts result.count
     end
 
     render :text => '200'
