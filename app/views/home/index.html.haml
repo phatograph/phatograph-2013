@@ -2,19 +2,19 @@
 %ul
   - @github_repos.each do |repo|
     %li
-      = repo[:name]
-      %span.badge= repo[:size]
+      = repo.name
+      %span.badge= repo.size
 
 %h3 total bitbucket repositories: #{@bitbucket_repos.count}
 %ul
   - @bitbucket_repos.each do |repo|
     %li
-      = repo[:name]
-      %span.badge= repo[:size]
+      = repo.name
+      %span.badge= repo.size
 
 %h3 total heroku repositories: #{@heroku_apps.count}
 %ul
   - @heroku_apps.each do |repo|
     %li
-      = repo['name']
-      %span.badge= repo['repo_size']
+      = repo.name
+      %span.badge= repo.size

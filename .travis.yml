@@ -12,6 +12,9 @@ after_script:
 - heroku keys:clear
 - yes | heroku keys:add
 - yes | git push heroku master
+branches:
+  only:
+    - master
 env:
   global:
   - secure: ! 'FZ4Os+3zidYERHmdesrifZO47XGy7jOfH4v/wbYofbRhLQJUwplQHFVF6aHi

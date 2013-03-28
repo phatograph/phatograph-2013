@@ -36,5 +36,5 @@ Phatograph2013::Application.configure do
   config.assets.debug = false
 
   # See everything in the log (default is :info)
-  config.log_level = :fetal
+  # config.log_level = :fetal
 end
